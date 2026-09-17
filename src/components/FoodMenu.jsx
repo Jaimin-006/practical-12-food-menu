@@ -14,29 +14,31 @@ function FoodMenu() {
   }
 
   return (
-    <div className="p-6 max-w-lg mx-auto bg-white rounded-lg shadow-sm border border-orange-200">
-      <h2 className="text-2xl font-bold font-serif text-orange-700 mb-4 border-b border-orange-100 pb-2">
-        Quick Bites Food Corner
-      </h2>
+    <div className="p-6 max-w-lg mx-auto bg-white rounded-xl shadow-md border border-amber-200/80">
+      <div className="border-b border-amber-100 pb-3 mb-4">
+        <h2 className="text-2xl font-bold bg-gradient-to-r from-amber-600 to-rose-600 bg-clip-text text-transparent">
+          Quick Bites Food Corner
+        </h2>
+      </div>
 
       <div className="mb-4">
-        <p className="text-xs font-semibold text-stone-600 mb-2">Filter Category:</p>
+        <p className="text-xs font-semibold text-stone-500 uppercase tracking-wider mb-2">Filter Category:</p>
         <div className="flex space-x-2">
           <button
             onClick={() => applyCategoryFilter('Burgers')}
-            className="bg-orange-600 hover:bg-orange-700 text-white px-3 py-1.5 rounded-md text-xs font-semibold transition"
+            className="bg-amber-600 hover:bg-amber-700 text-white px-3.5 py-1.5 rounded-lg text-xs font-semibold shadow-sm transition"
           >
             Burgers
           </button>
           <button
             onClick={() => applyCategoryFilter('Pizzas')}
-            className="bg-orange-600 hover:bg-orange-700 text-white px-3 py-1.5 rounded-md text-xs font-semibold transition"
+            className="bg-amber-600 hover:bg-amber-700 text-white px-3.5 py-1.5 rounded-lg text-xs font-semibold shadow-sm transition"
           >
             Pizzas
           </button>
           <button
             onClick={() => applyCategoryFilter('All')}
-            className="bg-stone-600 hover:bg-stone-700 text-white px-3 py-1.5 rounded-md text-xs font-semibold transition"
+            className="bg-stone-700 hover:bg-stone-800 text-white px-3.5 py-1.5 rounded-lg text-xs font-semibold shadow-sm transition"
           >
             Show All
           </button>
@@ -44,26 +46,26 @@ function FoodMenu() {
       </div>
 
       <div className="mb-5">
-        <p className="text-xs font-semibold text-stone-600 mb-2">Apply Quick Promo:</p>
+        <p className="text-xs font-semibold text-stone-500 uppercase tracking-wider mb-2">Apply Quick Promo:</p>
         <div className="flex space-x-2">
           <button
             onClick={() => applyDiscountCode(10, 'WELCOME10')}
-            className="bg-amber-600 hover:bg-amber-700 text-white px-3 py-1.5 rounded-md text-xs font-semibold transition"
+            className="bg-rose-500 hover:bg-rose-600 text-white px-3.5 py-1.5 rounded-lg text-xs font-semibold shadow-sm transition"
           >
             10% Off
           </button>
           <button
             onClick={() => applyDiscountCode(20, 'FEAST20')}
-            className="bg-red-600 hover:bg-red-700 text-white px-3 py-1.5 rounded-md text-xs font-semibold transition"
+            className="bg-purple-600 hover:bg-purple-700 text-white px-3.5 py-1.5 rounded-lg text-xs font-semibold shadow-sm transition"
           >
             20% Off
           </button>
         </div>
       </div>
 
-      <div className="p-4 bg-orange-50/70 rounded-md border border-orange-200 text-sm space-y-1">
-        <p className="text-stone-800">Current Category: <span className="font-bold text-orange-800">{selectedCategory}</span></p>
-        <p className="text-stone-800">Applied Discount: <span className="font-bold text-orange-800">{discount}%</span></p>
+      <div className="p-4 bg-amber-50/80 rounded-lg border border-amber-200 text-sm space-y-1">
+        <p className="text-stone-700 font-medium">Current Category: <span className="font-bold text-amber-800">{selectedCategory}</span></p>
+        <p className="text-stone-700 font-medium">Applied Discount: <span className="font-bold text-amber-800">{discount}%</span></p>
       </div>
     </div>
   );

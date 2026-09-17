@@ -3,7 +3,7 @@ import FoodMenu from './components/FoodMenu';
 
 function App() {
   return (
-    <div className="bg-orange-50/60 min-h-screen p-8 font-sans">
+    <div className="bg-amber-50/40 min-h-screen p-8 font-sans antialiased text-stone-800">
       <FoodMenu />
     </div>
   );
