@@ -13,12 +13,25 @@ function FoodMenu() {
     alert('Coupon Code Applied: ' + codeName + ' (' + percent + '% OFF)');
   }
 
+  function resetAll() {
+    setSelectedCategory('All');
+    setDiscount(0);
+  }
+
   return (
     <div className="p-6 max-w-lg mx-auto bg-white rounded-xl shadow-md border border-amber-200/80">
-      <div className="border-b border-amber-100 pb-3 mb-4">
+      <div className="border-b border-amber-100 pb-3 mb-4 flex justify-between items-center">
         <h2 className="text-2xl font-bold bg-gradient-to-r from-amber-600 to-rose-600 bg-clip-text text-transparent">
           Quick Bites Food Corner
         </h2>
+        {(selectedCategory !== 'All' || discount > 0) && (
+          <button
+            onClick={resetAll}
+            className="text-xs text-amber-700 hover:text-rose-600 font-semibold underline"
+          >
+            Clear Filters
+          </button>
+        )}
       </div>
 
       <div className="mb-4">
